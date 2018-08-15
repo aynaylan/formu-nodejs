@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+
+   form.form-group(method='post')
+     input= org
+     input.form-control(type='text',placeholder='Organiser Name',name='jina')
+     br
+     input.form-control(type='email',placeholder='Organiser Email',name='email')
+     br
+     input.form-control(type='text',placeholder='Organiser Phone',name='phone')
+     br
+     button.btn.btn-outline-success.form-control(type='submit') Finish
+     br

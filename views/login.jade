@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+   a.navbar-brand(href="/") Maformu
+   button.navbar-toggler(type="button",data-toggle="collapse",data-target="#collapsibleNavbar")
+    span.navbar-toggler-icon
+   div.collapse.navbar-collapse(id="collapsibleNavbar")
+    ul.navbar-nav
+     li.nav-item
+      a.nav-link Create
+     li.nav-item
+      a.nav-link Deals
+     li.nav-item
+      a.nav-link Categories
+  div.container
+   div.form-group
+    input.form-control(type="email", name="Email",placeholder="Email address")
+    br
+    input.form-control(type="password", name="pass",placeholder="Password")
+    br
+    button.form-control.btn.btn-outline-success(type="submit") Login
+    br
+    br
+    button.form-control.btn.btn-outline-danger(type="button" data-toggle="modal" data-target="#myModal") Forgot Password
+    br
+    br
+    
+    a(href="/Register")
+     button.form-control.btn.btn-outline-warning(type="submit") Register
+   div.modal.fade#myModal
+    div.modal-dialog
+     div.modal-content
+      div.modal-header
+       h4.modal-title Forgot Password!
+        i.fa.fa-frown-o
+      
+      div.modal-body
+       p If you've forgot your password kindly enter the e-mail address associated with your account!
+       p You'll recieve a link containing password resetting details        
+       input.form-control(type="text",placeholder="Please enter you e-mail address")
+       center
+        button.btn.btn-outline-primary(type="submit") Proceed
+         i.fa.fa-handshake-o
+      div.modal-footer
+       button.btn.btn-outline-danger(type="button",data-dismiss="modal") Close
+    
+    

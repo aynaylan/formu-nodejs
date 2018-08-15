@@ -1,0 +1,20 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('header.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.custom{
+  display: inline-block;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+}

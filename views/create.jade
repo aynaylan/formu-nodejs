@@ -1,0 +1,107 @@
+extends layout
+ 
+
+block content
+  
+   nav.navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top#myScrollspy
+
+    a.navbar-brand(href='/') Maformu
+    button.navbar-toggler(type='button',data-toggle='collapse',data-target='#collapsibleNavbar')
+       span.navbar-toggler-icon
+    div.collapse.navbar-collapse(id='collapsibleNavbar')
+    
+       ul.navbar-nav#log
+         li.nav-item
+           .nav-link(href="/deals") Deals
+         li.nav-item
+           button.btn.btn-outline-success(type='button',data-toggle='modal',data-target='#searchBox') Search
+         li.nav-item
+            
+      
+      
+        
+        
+   div.modal.fade#searchBox
+    div.modal-dialog
+     div.modal-content
+       div.modal-header
+        h4.modal-title What are you looking for?
+        button.close(type='button',data-dismiss='modal') &times;
+       div.modal-body
+          form.form-group(method='post')
+            input.form-control(type='text',placeholder='Event Name or Location',name='pwd')
+            br
+            select.form-control(name='category')
+             option(value="Concert") Concert
+             option(value="Food/Drinks") Food/Drinks
+             option(value="Tournament") Tournament
+             option(value="Night out") Night out
+             option(value="Motorsports") Motorsports 
+             option(value="Social/Outdoor") Social/Outdoor
+             option(value="Religious") Religious
+            br
+            a(href='/Category')
+              button.btn.btn-success.form-control(type='submit') Search
+        
+         
+         
+
+           
+         div.modal-footer
+          a(href='/test') Check out these lit deals!
+     
+     
+     
+   
+  
+  
+  
+   div.container
+     br
+     br
+     h1 Create an event for free!
+     div.alert.alert-warning#ola
+       button.close(type='button',data-dismiss='alert') &times;
+       strong You haven't logged in! 
+       button.btn.btn-outline-success#authentify() Log in
+   
+       
+
+     form.form-group#cEvent(method='post')
+      input.form-control(type='text',placeholder='Event Name',name='jina',required)
+      br
+      input.form-control(type='text',placeholder='Location',name='locality',required)
+      br
+      select.form-control(name='category')
+          option(value="Concert") Concert
+          option(value="Food/Drinks") Food/Drinks
+          option(value="Tournament") Tournament
+          option(value="Night out") Night out
+          option(value="Motorsports") Motorsports 
+          option(value="Social/Outdoor") Social/Outdoor
+          option(value="Religious") Religious
+      br
+      input.form-control(type='date',placeholder='When',name='date',required)
+      br
+      input.form-control( type='time',placeholder='Start Time',name='time',required)
+      br
+      textarea.form-control(type='text',placeholder='Describe your event to create a good first impression',name='description',required)
+      br
+      input.form-control#jinaO(type='text',placeholder='Organiser Name',name='jinaO',required)
+      br
+      input.form-control#emailO(type='text',placeholder='Organiser Email',name='emailO',required)
+      br
+      input.form-control#phoneO(type='number',placeholder='Organiser Phone',name='phoneO',required)
+      br
+      input.form-control#phoneO(type='file',name='file',required)
+      br
+      button.btn.btn-outline-success.form-control(type='submit') Create Event
+      br
+       
+       
+       
+            
+           
+             
+          
+     

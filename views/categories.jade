@@ -1,0 +1,41 @@
+extends layout
+
+block content
+
+    nav.navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top
+
+     a.navbar-brand Maformu
+     button.navbar-toggler(type='button',data-toggle='collapse',data-target='#collapsibleNavbar')
+       span.navbar-toggler-icon
+     div.collapse.navbar-collapse(id='collapsibleNavbar')
+    
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href="/categories") Categories
+          li.nav-item
+            .nav-link(href="#book-a") Deals
+          li.nav-item
+            button.btn.btn-success(type='button',data-toggle='modal',data-target='#myModal') Login
+ 
+ 
+    div.modal.fade#myModal
+             div.modal-dialog
+              div.modal-content
+                div.modal-header
+                 h4.modal-title Access your Account
+                 button.close(type='button',data-dismiss='modal') &times;
+                div.modal-body
+                   form.form-group(method='post')
+                     input.form-control(type='email',placeholder='example@example.com')
+                     br
+                     input.form-control(type='password',placeholder='Password')
+                     br
+                     button.btn.btn-success.form-control(type='submit') Login
+                     br
+                     br
+                     
+                div.modal-footer
+                 a(href='/test') Forgot password!
+                 button.btn.btn-danger(type='button',data-dismiss='modal') Close
+            
+            

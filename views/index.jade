@@ -1,0 +1,58 @@
+extends layout
+
+block content
+   nav.navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top#myScrollspy
+
+    a.navbar-brand(href='/') Maformu
+    button.navbar-toggler(type='button',data-toggle='collapse',data-target='#collapsibleNavbar')
+       span.navbar-toggler-icon
+    div.collapse.navbar-collapse(id='collapsibleNavbar')
+    
+       ul.navbar-nav#log
+         li.nav-item
+           a.nav-link(href="/Create") Create
+         li.nav-item
+           a.nav-link(href="/deals") Deals
+         li.nav-item
+           button.btn.btn-outline-success(type='button',data-toggle='modal',data-target='#searchBox') Search
+        
+   div.modal.fade#searchBox
+    div.modal-dialog
+     div.modal-content
+       div.modal-header
+       h4.modal-title What are you looking for?
+       button.close(type='button',data-dismiss='modal') &times;
+       div.modal-body
+         form.form-group(method='post')
+           input.form-control(type='text',placeholder='Event Name or Location',name='pwd')
+           br
+           select.form-control(name='category')
+             option(value="Concert") Concert
+             option(value="Food/Drinks") Food/Drinks
+             option(value="Tournament") Tournament
+             option(value="Night out") Night out
+             option(value="Motorsports") Motorsports 
+             option(value="Social/Outdoor") Social/Outdoor
+             option(value="Religious") Religious
+             option(value="Photoshoots") Religious
+                     
+             br
+           a(href='/Category')
+           button.btn.btn-success.form-control(type='submit') Search    
+       div.modal-footer
+        a(href='/test') Check out these lit deals!
+     
+        
+   br
+   br 
+   br     
+   p= haha  
+   div.card-columns
+    each event in data 
+     div.card
+      div.card-header= event.Category
+      div.card-body
+       h4.card-title= event.Name
+       img.card-img-top(src= event.PosterUrl)
+       p.card-text= event.Description
+      div.card-footer= event.Date

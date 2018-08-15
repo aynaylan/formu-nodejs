@@ -1,0 +1,52 @@
+extends layout
+
+block content
+
+  nav.navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top
+  
+   a.navbar-brand(href='/') Maformu
+   button.navbar-toggler(type='button',data-toggle='collapse',data-target='#collapsibleNavbar')
+         span.navbar-toggler-icon
+   div.collapse.navbar-collapse(id='collapsibleNavbar')
+      
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href="/categories") Categories
+        li.nav-item
+          .nav-link(href="#book-a") Deals
+        li.nav-item
+            a.nav-link(href="/Create") Create
+        
+     
+  
+           
+          
+    
+  br
+  br
+  br
+  div.container
+   h1 Create an account for free!
+   form.form-group(method='post')
+         br
+         input.form-control(type='email',placeholder='example@example.com',name='email')
+         br
+         input.form-control(type='password',placeholder='Password',)
+         br
+         input.form-control(type='password',placeholder='Confirm Password',name='pwd')
+         br
+         button.btn.btn-outline-success.form-control(type='submit') Create Account
+         br
+         br
+         a(href="/Login")
+          button.btn.btn-outline-warning.form-control(type='button') Login
+         
+    
+    
+    
+    
+    
+       
+  
+        
+   p= items
