@@ -22,21 +22,7 @@ admin.initializeApp({
   var storage = admin.storage();
   var ref = db.ref('/');
 
-  /*
-  firebase.initializeApp({
-
-    apiKey: "AIzaSyBjHMa-a500mDxJQ_QyWGUp3lBe7nc2lbw",
-    authDomain: "maformuu.firebaseapp.com",
-    databaseURL: "https://maformuu.firebaseio.com",
-    projectId: "maformuu",
-    storageBucket: "maformuu.appspot.com",
-    messagingSenderId: "300991746205"
-
-  });
-  var authen = fire.auth();
   
-*/
-
 
 
 
